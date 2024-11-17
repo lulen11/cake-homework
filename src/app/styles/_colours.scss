@@ -1,0 +1,28 @@
+// CAKE COLOURS
+$primary-white: #ffffff;
+$light-grey: #f6f8f9;
+$dark-grey: #6f7285;
+$light-lilac: #f1efff;
+$eggplant: #2337e0;
+$lilac-grey: #5c5e89;
+$eggplant-dark: #24244f;
+$ocean-black: #000447;
+$eggplant-black: #18161a;
+
+$border-colour: $light-grey;
+$text-colour: $ocean-black;
+$text-colour-nav: $lilac-grey;
+$app-primary-colour: $eggplant;
+$app-secondary-colour: $light-lilac;
+
+// THEMES //
+
+// LIGHT THEME
+$theme-light-background: $primary-white;
+$theme-light-border: $light-grey;
+$theme-light-text: $ocean-black;
+
+// DARK THEME
+$theme-dark-background: $eggplant-black;
+$theme-dark-border: $light-grey;
+$theme-dark-text: $primary-white;
