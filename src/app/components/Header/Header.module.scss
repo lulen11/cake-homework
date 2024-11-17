@@ -1,0 +1,55 @@
+@use "../../styles/globals" as globals;
+
+@keyframes dizzyColors {
+  0%,
+  100% {
+    color: globals.$eggplant;
+  }
+  50% {
+    color: globals.$lilac-grey;
+  }
+  75% {
+    color: globals.$eggplant-dark;
+  }
+}
+
+.header {
+  box-sizing: border-box;
+  position: fixed;
+  width: 100%;
+  padding: 0.75rem 0.6rem;
+  border-bottom: 1px solid globals.$border-colour;
+  background-color: globals.$primary-white;
+  background-color: var(--background-color);
+  @media only screen and (min-width: globals.$sm-md) {
+    padding: 1rem;
+  }
+
+  &Wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  span {
+    font-size: 0.75rem;
+    margin-bottom: 0.25rem;
+  }
+
+  &Contact {
+    text-decoration: none;
+    transition: globals.$smooth-transition;
+    font-weight: 400;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+      animation: dizzyColors 3s ease-in-out infinite;
+      border-bottom: 1px solid globals.$app-primary-colour;
+    }
+  }
+  .logo {
+    transition: globals.$smooth-transition;
+    fill: var(--logo-fill-color);
+  }
+}
