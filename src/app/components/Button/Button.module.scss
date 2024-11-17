@@ -1,0 +1,17 @@
+@use "../../styles/globals" as globals;
+
+.button {
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-family: globals.$sans-serif-font;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: globals.$smooth-transition;
+
+  &:hover {
+    background-color: globals.$app-secondary-colour;
+    color: globals.$text-colour;
+  }
+}
