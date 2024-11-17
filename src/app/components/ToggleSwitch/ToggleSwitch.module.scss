@@ -1,0 +1,62 @@
+@use "../../styles/globals" as globals;
+
+.toggleSwitch {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0 2.5rem;
+}
+
+.label {
+  color: var(--text-color);
+  font-family: globals.$sans-serif-font;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+
+.switch {
+  position: relative;
+  cursor: pointer;
+  transition: globals.$smooth-transition;
+  display: flex;
+  width: 2rem;
+  height: 0.95rem;
+  padding: 0.25rem 0.125rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  border-radius: 0.5rem;
+  border: 1px solid globals.$eggplant;
+  background: globals.$primary-white;
+
+  .dial {
+    background-color: globals.$eggplant;
+    width: 0.563rem;
+    height: 0.563rem;
+    border-radius: 99px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: left 0.3s;
+  }
+}
+
+@keyframes fadeTheme {
+  0% {
+    background: globals.$primary-white;
+  }
+  100% {
+    background: globals.$eggplant-black;
+  }
+}
+
+.switch.active {
+  background: globals.$eggplant-black;
+  border-color: globals.$lilac-grey;
+  animation: fadeTheme 0.7s ease forwards;
+  .dial {
+    background: globals.$primary-white;
+    left: 1.1rem;
+  }
+}

@@ -1,0 +1,24 @@
+@use "../../styles/globals" as globals;
+
+.light {
+  background-color: globals.$theme-light-background;
+  color: globals.$theme-light-text;
+  border-color: globals.$theme-light-border;
+  --text-color: globals.$theme-light-text;
+  --background-color: globals.$theme-light-background;
+  --fill-color: globals.$theme-light-text;
+
+  svg path {
+    fill: globals.$theme-light-text;
+  }
+}
+
+.dark {
+  background-color: globals.$theme-dark-background;
+  color: globals.$theme-dark-text;
+  --background-color: globals.$theme-dark-background;
+  --fill-color: globals.$theme-dark-text;
+  svg path {
+    fill: globals.$theme-dark-text;
+  }
+}
