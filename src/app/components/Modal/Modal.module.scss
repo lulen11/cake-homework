@@ -1,0 +1,102 @@
+@use "../../styles/globals" as globals;
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #18161ae0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  animation: fadeIn 0.2s ease forwards;
+}
+
+.modalContent {
+  position: relative;
+  background: globals.$primary-white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 25rem;
+  text-align: center;
+  animation: slideUp 0.4s ease-out;
+  transform-origin: bottom center;
+  h2,
+  p {
+    font-family: globals.$sans-serif-font;
+    color: globals.$eggplant-black !important;
+    text-align: left;
+    margin-bottom: 1rem;
+    max-width: 80%;
+  }
+
+  h2 {
+    @include globals.headingFont3;
+  }
+
+  p {
+    @include globals.bodyFont;
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: globals.$eggplant-black;
+}
+
+.actions {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+
+  &:has(.button:nth-child(2)) {
+    justify-content: space-between;
+  }
+
+  .button {
+    margin-right: 1rem;
+    transition: globals.$smooth-transition;
+
+    &.back {
+      background-color: globals.$light-lilac;
+      color: globals.$eggplant-dark;
+    }
+    &.next {
+      background-color: globals.$eggplant;
+      color: globals.$light-grey;
+    }
+    &:last-child {
+      margin: 0;
+    }
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
