@@ -1,0 +1,61 @@
+@use "../styles/colours" as colours;
+@use "../styles/breakpoints" as breakpoints;
+@use "../styles/motion" as motion;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+$sans-serif-font: "Inter", Arial, Helvetica, sans-serif;
+
+@mixin headingFont2 {
+  font-family: $sans-serif-font;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text-color);
+
+  &::selection {
+    background: colours.$app-secondary-colour;
+    color: colours.$text-colour;
+  }
+}
+
+@mixin headingFont3 {
+  font-family: $sans-serif-font;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--text-color);
+
+  &::selection {
+    background: colours.$app-secondary-colour;
+    color: colours.$text-colour;
+  }
+}
+
+@mixin headingFont5 {
+  font-family: $sans-serif-font;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.32;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+
+  &::selection {
+    background: colours.$app-secondary-colour;
+    color: colours.$text-colour;
+  }
+}
+
+@mixin bodyFont {
+  font-family: $sans-serif-font;
+  color: var(--text-color);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  text-wrap: pretty;
+  &::selection {
+    background: colours.$app-secondary-colour;
+    color: colours.$text-colour;
+  }
+}

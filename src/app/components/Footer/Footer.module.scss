@@ -1,0 +1,32 @@
+@use "../../styles/globals" as globals;
+
+.footer {
+  box-sizing: border-box;
+  padding: 1rem;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  margin-top: 2rem;
+  border-top: 1px solid globals.$border-colour;
+  transition: globals.$smooth-transition;
+
+  &Wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  p {
+    font-size: 0.75rem;
+  }
+
+  a {
+    transition: globals.$smooth-transition;
+    border-bottom: 1px solid transparent;
+    &:hover {
+      color: globals.$eggplant;
+      font-style: italic;
+      border-bottom: 1px solid globals.$eggplant;
+    }
+  }
+}
