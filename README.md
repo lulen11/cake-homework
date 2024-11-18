@@ -8,7 +8,7 @@ This app is a [Next.js](https://nextjs.org) project bootstrapped with [`create-n
 
 Chose to create a simple Next.js app by running `create-next-app`. Some of the reasoning behind my configuration choices: 
 
-* Instead of working with TypeScript, I chose JavaScript for this project because I’m more familiar with it—I knew I would be building basic features, and I wanted to be efficient for this small task. I am familiar with Typescript (see a recent project I’ve built with TypeScript here) but I knew it would slow me down being strict. 
+* Instead of working with TypeScript, I chose JavaScript for this project because I’m more familiar with it—I knew I would be building basic features, and I wanted to be efficient for this small task. I am familiar with Typescript (see a recent project I’ve built with TypeScript [here](https://github.com/lulen11/airtime-website)) but I knew it would slow me down being strict. 
 
 * I used ESLint configuration. I'm very familiar with ESLint config and it makes me a faster developer. Setting a standard and automating my formatting. 
 
