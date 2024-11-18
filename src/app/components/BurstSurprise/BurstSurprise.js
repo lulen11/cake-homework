@@ -48,4 +48,6 @@ const BurstSurprise = forwardRef((props, ref) => {
   );
 });
 
+BurstSurprise.displayName = "BurstSurprise";
+
 export default BurstSurprise;

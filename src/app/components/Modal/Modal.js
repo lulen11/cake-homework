@@ -47,7 +47,9 @@ export default function Modal({ isOpen, onClose, onNext, onDone }) {
 
         {step === 1 && (
           <>
-            <h2>Do you want to try something that's a treat for the eyes?</h2>
+            <h2>
+              Do you want to try something that&apos;s a treat for the eyes?
+            </h2>
             <p>
               Dark themes are known to be nice and healthy for us screen loving
               folk. Do you want to see what could be in store for you?

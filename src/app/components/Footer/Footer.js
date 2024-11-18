@@ -22,7 +22,7 @@ export default function Footer() {
           >
             See
           </a>{" "}
-          what I've seen.{" "}
+          what I&apos;ve seen.{" "}
         </p>
       </div>
     </footer>
