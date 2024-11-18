@@ -50,7 +50,7 @@ The components are all setup individually and with CSS modules. This component-b
   
 * There's one more hidden treat to show a slither of personality. 
 
-## Take a looky
+## Take a looky 👀
 
 ### Look at it locally:
 
