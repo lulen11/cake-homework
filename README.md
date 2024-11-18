@@ -46,7 +46,9 @@ The components are all setup individually and with CSS modules. This component-b
   
 * Where they’re not SVGs, I like using the Next.js <Image> component for optimising images, to make use of lazy loading, but most of all I like that it forces me to put in alt tags - I believe accessibility to be very important in web & app development.
   
-* To rapidly build ‘Part 2’, I researched sliding and swiping open-source components. I wanted to leverage a lightweight and well-maintained package to create a responsive slider component with built-in swiping functionality. Leaning on this library ensures good UX and optimal performance. By using Swiper, I was able to focus on tailoring the visuals and user interactions without reinventing the wheel, resulting in a scalable and maintainable solution. 
+* To rapidly build ‘Part 2’, I researched sliding and swiping open-source components. I wanted to leverage a lightweight and well-maintained package to create a responsive slider component with built-in swiping functionality. Leaning on this library ensures good UX and optimal performance. By using Swiper, I was able to focus on tailoring the visuals and user interactions without reinventing the wheel, resulting in a scalable and maintainable solution.
+  
+* I didn't include the correct arrow icons in the Slider component to save on time. Assuming in the future, these might be imported from a Cake Design Library or icon library.  
 
 ## Take a looky
 
