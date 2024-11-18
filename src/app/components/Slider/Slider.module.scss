@@ -1,0 +1,102 @@
+@use "../../styles/globals" as globals;
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &Wrapper {
+    position: relative;
+  }
+}
+
+.slide {
+  background-color: globals.$eggplant-black-transparent;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  display: flex;
+  cursor: pointer;
+  transition: globals.$smooth-transition;
+
+  &:hover {
+    background-color: globals.$app-secondary-colour;
+    color: globals.$text-colour;
+  }
+
+  .image {
+    &Wrapper {
+      position: relative;
+      width: 5.5rem;
+      height: 5.5rem;
+      margin-right: 0.75rem;
+    }
+    border-radius: 1.125rem;
+  }
+
+  .time {
+    position: absolute;
+    bottom: 0.4rem;
+    right: 0.4rem;
+    background-color: #16164087;
+    padding: 0.3rem 0.5rem;
+    border-radius: 1rem;
+    color: globals.$primary-white;
+    font-family: globals.$sans-serif-font;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .category {
+    display: block;
+    padding: 0.2rem 0;
+    font-family: globals.$sans-serif-font;
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: globals.$dark-grey;
+  }
+
+  .title {
+    font-family: globals.$sans-serif-font;
+    font-size: 0.9rem;
+    letter-spacing: -0.02rem;
+    font-weight: 500;
+    color: globals.$eggplant-black;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+  }
+}
+
+.navigationWrapper {
+  position: absolute;
+  top: -2.45rem;
+  right: 0.1rem;
+  display: flex;
+  align-items: center;
+  z-index: 3;
+  gap: 0.25rem;
+  .link {
+    font-size: 0.75rem;
+  }
+}
+
+.prevButton,
+.nextButton {
+  color: globals.$eggplant-black;
+  border: 1px solid globals.$eggplant-black-transparent;
+  border-radius: 100%;
+  width: 1.75rem;
+  height: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: globals.$smooth-transition;
+  font-size: 0.9rem;
+  line-height: 0.6rem;
+
+  &:hover {
+    background-color: globals.$app-secondary-colour;
+    color: globals.$text-colour;
+  }
+}

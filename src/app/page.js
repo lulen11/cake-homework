@@ -3,6 +3,7 @@ import React, { useState, useRef } from "react";
 import ToggleSwitch from "./components/ToggleSwitch/ToggleSwitch";
 import Button from "./components/Button/Button";
 import Modal from "./components/Modal/Modal";
+import Slider from "./components/Slider/Slider";
 import { useTheme } from "./components/ThemeContext/ThemeContext";
 import styles from "./page.module.scss";
 
@@ -34,6 +35,12 @@ export default function Home() {
             Maybe you prefer a round-about <em>(but fun)</em> approach?
           </p>
           <Button text="Let's try it" onClick={handleOpenModal} />{" "}
+        </section>
+        <section className={`${styles.panel} ${styles.panelSlider}`}>
+          <div className={styles.wrapper}>
+            <h3>Another Panel</h3>
+            <Slider />
+          </div>
         </section>
 
         <Modal

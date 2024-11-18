@@ -25,21 +25,41 @@
 }
 
 .panel {
-  max-width: 26rem;
   margin-bottom: 1.5rem;
-  &Intro {
-    h2 {
-      @include globals.headingFont2;
-    }
+
+  .wrapper {
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+
+  h2 {
+    @include globals.headingFont2;
+  }
+
+  h3 {
+    @include globals.headingFont3;
+    margin-bottom: 0.75rem;
+  }
+
+  h5 {
+    @include globals.headingFont5;
+  }
+
+  p {
+    @include globals.bodyFont;
+    margin-bottom: 0.62rem;
   }
 
   &Switch {
-    h5 {
-      @include globals.headingFont5;
-    }
-    p {
-      @include globals.bodyFont;
-      margin-bottom: 0.62rem;
-    }
+    max-width: 26rem;
+  }
+
+  &Slider {
+    width: 100%;
+    border: 1px solid globals.$eggplant-black-transparent;
+    border-radius: 20px;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    // background-color: globals.$primary-white;
   }
 }
