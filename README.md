@@ -12,11 +12,11 @@ Chose to create a simple Next.js app by running `create-next-app`. Some of the r
 
 * I used ESLint configuration. I'm very familiar with ESLint config and it makes me a faster developer. Setting a standard and automating my formatting. 
 
-* Styling choices:  I’m also very familiar with Tailwind CSS but again, I’m faster without it. I prefer to use Sass and to set up my projects with CSS modules. 
+* Styling choices:  I’m also very familiar with Tailwind CSS but again, I’m faster without it. I prefer to use Sass and to set up my projects with CSS modules. More on that below.
 
 * Defined routes using App Router because it’s simply more familiar to me having used this set up in my last few projects. I also am familiar with the pages directory but now it feels like a legacy option. I prefer the layouts, nested routing and the organisation for scalability.
 
-Then to finalise the initial setup, I created a git repository, initialised git in my project and linked the two. I made my first commit on main, then branched off to `development` to show you how I would normally work on a development branch (or a feature branch) to collaborate and secure version control. 
+To finalise the initial setup, I created a git repository, initialised git in my project and linked the two. I made my first commit on main, then branched off to `development` to show you how I would normally work on a development branch (or a feature branch) to collaborate and secure version control. 
 
 From there, I set up the foundational styles for the Cake brand—setting up colour and typography variables, among other essentials. I spent a bit of time laying these foundations which I was happy to do because I wanted the code to be clean & well-structured from the start. I appreciate consistent and efficient workflows and wanted to demonstrate my workflow as scalable and adaptable for future needs.
 
