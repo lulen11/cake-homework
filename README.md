@@ -14,8 +14,6 @@ Chose to create a simple Next.js app by running `create-next-app`. Some of the r
 
 * Styling choices:  I’m also very familiar with Tailwind CSS but again, I’m faster without it. I prefer to use Sass and to set up my projects with CSS modules. 
 
-* Whether to include app directory (for the new Next.js App Router
-
 * Defined routes using App Router because it’s simply more familiar to me having used this set up in my last few projects. I also am familiar with the pages directory but now it feels like a legacy option. I prefer the layouts, nested routing and the organisation for scalability.
 
 Then to finalise the initial setup, I created a git repository, initialised git in my project and linked the two. I made my first commit on main, then branched off to `development` to show you how I would normally work on a development branch (or a feature branch) to collaborate and secure version control. 
@@ -48,7 +46,9 @@ The components are all setup individually and with CSS modules. This component-b
   
 * To rapidly build ‘Part 2’, I researched sliding and swiping open-source components. I wanted to leverage a lightweight and well-maintained package to create a responsive slider component with built-in swiping functionality. Leaning on this library ensures good UX and optimal performance. By using Swiper, I was able to focus on tailoring the visuals and user interactions without reinventing the wheel, resulting in a scalable and maintainable solution.
   
-* I didn't include the correct arrow icons in the Slider component to save on time. Assuming in the future, these might be imported from a Cake Design Library or icon library.  
+* I didn't include the correct arrow icons in the Slider component to save on time. Assuming in the future, these might be imported from a Cake Design Library or icon library.
+  
+* There's one more hidden treat to show a slither of personality. 
 
 ## Take a looky
 
