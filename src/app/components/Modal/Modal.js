@@ -1,12 +1,26 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, {
+  useState,
+  useEffect,
+  useRef,
+  forwardRef,
+  useImperativeHandle,
+} from "react";
 import Button from "../Button/Button";
 import BurstSurprise from "../BurstSurprise/BurstSurprise";
 import styles from "./Modal.module.scss";
 
-export default function Modal({ isOpen, onClose, onNext, onDone }) {
+const Modal = forwardRef(({ onDone }, ref) => {
+  // encapsulate / manage the open and close state of the modal so parent doesn't have to
+  const [isOpen, setIsOpen] = useState(false);
   const [step, setStep] = useState(1);
   const burstRef = useRef(null);
+
+  // expose these open/close methods to the parent component
+  useImperativeHandle(ref, () => ({
+    open: () => setIsOpen(true),
+    close: () => setIsOpen(false),
+  }));
 
   useEffect(() => {
     if (isOpen) {
@@ -21,7 +35,8 @@ export default function Modal({ isOpen, onClose, onNext, onDone }) {
     if (step < 2) {
       setStep(step + 1);
     } else {
-      onDone();
+      if (onDone) onDone();
+      setIsOpen(false);
     }
   };
 
@@ -31,7 +46,7 @@ export default function Modal({ isOpen, onClose, onNext, onDone }) {
 
   const handleOverlayClick = (e) => {
     if (e.target.classList.contains(styles.modalOverlay)) {
-      onClose();
+      setIsOpen(false);
     }
   };
 
@@ -41,7 +56,7 @@ export default function Modal({ isOpen, onClose, onNext, onDone }) {
     <div className={styles.modalOverlay} onClick={handleOverlayClick}>
       <div className={styles.modalContent}>
         {/* Not using the button component here because I want this element to be unique to this modal */}
-        <button className={styles.closeButton} onClick={onClose}>
+        <button className={styles.closeButton} onClick={() => setIsOpen(false)}>
           &#10005;
         </button>
 
@@ -82,4 +97,7 @@ export default function Modal({ isOpen, onClose, onNext, onDone }) {
       </div>
     </div>
   );
-}
+});
+
+Modal.displayName = "Modal";
+export default Modal;

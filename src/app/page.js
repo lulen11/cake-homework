@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import ToggleSwitch from "./components/ToggleSwitch/ToggleSwitch";
 import Button from "./components/Button/Button";
 import Modal from "./components/Modal/Modal";
@@ -8,16 +8,14 @@ import { useTheme } from "./components/ThemeContext/ThemeContext";
 import styles from "./page.module.scss";
 
 export default function Home() {
-  const [isModalOpen, setModalOpen] = useState(false);
+  const modalRef = useRef(null);
   const { theme, toggleTheme } = useTheme();
-
-  const handleOpenModal = () => setModalOpen(true);
-  const handleCloseModal = () => setModalOpen(false);
 
   const handleDoneInModal = () => {
     // Ensure theme is set to dark when user finishes with modal
     if (theme !== "dark") toggleTheme();
-    handleCloseModal();
+    // close the modal from inside the component
+    modalRef.current.close();
   };
 
   return (
@@ -34,7 +32,11 @@ export default function Home() {
           <p>
             Maybe you prefer a round-about <em>(but fun)</em> approach?
           </p>
-          <Button text="Let's try it" onClick={handleOpenModal} />{" "}
+          {/* trigger the modal to open via the ref */}
+          <Button
+            text="Let's try it"
+            onClick={() => modalRef.current.open()}
+          />{" "}
         </section>
         <section className={`${styles.panel} ${styles.panelSlider}`}>
           <div className={styles.wrapper}>
@@ -43,11 +45,7 @@ export default function Home() {
           </div>
         </section>
 
-        <Modal
-          isOpen={isModalOpen}
-          onClose={handleCloseModal}
-          onDone={handleDoneInModal}
-        />
+        <Modal ref={modalRef} onDone={handleDoneInModal} />
       </main>
     </div>
   );
