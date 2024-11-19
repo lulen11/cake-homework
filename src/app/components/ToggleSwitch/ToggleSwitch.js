@@ -7,10 +7,11 @@ export default function ToggleSwitch() {
   const { theme, toggleTheme } = useTheme();
 
   const handleToggle = () => {
-    toggleTheme();
-    if (theme === "light") {
-      setTimeout(() => {}, 200);
-    }
+    // fixing this empty function by performing the toggleTheme function after 100ms - oops!
+    //  also removed the if statement fto only perform this sublte delay on either theme siwtch️
+    setTimeout(() => {
+      toggleTheme();
+    }, 100);
   };
 
   return (
